@@ -1,9 +1,0 @@
-***************install azure function tools**************
-*Create tests for the function setup locally
-*set up function app and refactor zindi code into app.
-*Test and resolve String conversion error failure by old numpy deprecated package.
-Deploy on Azure and test.
-
-Next 
-See how best to seup a data egestion and trainning pipeline for new data
-Intergration when required
