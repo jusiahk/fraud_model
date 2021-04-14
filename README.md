@@ -4,4 +4,4 @@ The project has two parts  which is the Model development  part and a functional
 2. The test.py script  helps locally test the model.
 3. The main _init_.py  script starts functional app and scores given parameters.
 4. Data store folder has masked data for trainning and testing model.
-5. 
+
