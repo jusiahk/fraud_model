@@ -97,6 +97,6 @@ print("rfc ", classification_report(y_test, rfc_pred))
 predict_test = rfc.predict(X_test)
 
 # Save to file in the current working directory
-#print("model score: %.3f" % rfc.predict(test))
-joblib.dump(rfc, 'fraud_model.sav')
+print("model score: %.3f" % rfc.predict(X_test))
+joblib.dump(rfc, 'Fraud_model.sav')
 
