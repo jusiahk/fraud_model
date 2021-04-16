@@ -3,7 +3,7 @@ import azure.functions as func
 import pandas as pd
 import joblib
 import json
-
+import MySQLdb
 
 #Load from file
 rfc = joblib.load('fraud_model.sav')
@@ -34,7 +34,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         return json.dumps(response)
 
-    import MySQLdb
+    
 
 def dbconnect():
     try:
