@@ -34,6 +34,29 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         return json.dumps(response)
 
+    import MySQLdb
+
+def dbconnect():
+    try:
+        db = MySQLdb.connect(
+            host='localhost',
+            user='root',
+            passwd='password',
+            db='Fraud'
+        )
+    except Exception as e:
+        sys.exit("Can't connect to database")
+    return db
+
+def insertDb():
+    try:
+        db = dbconnect()
+        cursor = db.cursor()
+        cursor.execute("""
+        INSERT INTO Results(FraudResult) \
+        VALUES (%s) """, (data))
+        cursor.close()
+ 
     else:
         return func.HttpResponse(
              "Please pass a properly formatted JSON object to the API",
